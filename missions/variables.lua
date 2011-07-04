@@ -73,12 +73,12 @@ function test_table_type()
 end
 
 function test_function_type()
-  assert_equal(__, type(assert_equal)) -- assert_equal *is* a function
-  assert_equal(__, type(type)) -- and so is type
+  assert_equal("function", type(assert_equal)) -- assert_equal *is* a function
+  assert_equal("function", type(type)) -- and so is type
 end
 
 function test_thread_type()
-  assert_equal(__, type(coroutine.create(function() end)))
+  assert_equal("thread", type(coroutine.create(function() end)))
   -- we'll probably not learn about coroutines in our missions.
 end
 
